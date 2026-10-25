@@ -1,4 +1,4 @@
-# arch-plans
+# arch-plan
 
 Real-world architectural floor plan images with labels, for testing floor plan reading software.
 Most images are messy real house-plan drawings: room names, dimensions in feet and inches, door swings,
@@ -57,8 +57,8 @@ The VOC files keep the original labels. The mapping is `CLASS_FIX` in `scripts/b
 ## Quick use (PowerShell)
 
 ```powershell
-git clone https://github.com/<you>/arch-plans
-cd arch-plans
+git clone https://github.com/Abrodolph/arch-plan
+cd arch-plan
 Import-Csv index.csv | Where-Object { $_.kind -eq "real" -and [int]$_.stairs -gt 0 } | Select-Object -First 20 plan_id, image
 ```
 
